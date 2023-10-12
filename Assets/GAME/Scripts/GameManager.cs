@@ -77,7 +77,6 @@ public class GameManager : MonoBehaviour
 
     public void StartPlayerTurn()
     {
-        Debug.Log("LOOOOOOOOOOOOOKKKKKKKKK MAAAAAANNNNNNNN: " + playerChoseToStay +" "+ aiChoseToStay);
         isPlayerTurn = true;
         drawCanvas.enabled = true;
         
