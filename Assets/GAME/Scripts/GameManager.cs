@@ -9,15 +9,15 @@ public class GameManager : MonoBehaviour
 
     private bool isPlayerTurn = true;
     
-    private List<NumberedCard> playerHand = new List<NumberedCard>();
-    private List<NumberedCard> aiHand = new List<NumberedCard>();
+    public Player player;
+    public Player ai;
     
     private bool playerChoseToStay = false;
     private bool aiChoseToStay = false;
 
     private void Start()
     {
-        drawCanvas.enabled = false;
+        drawCanvas.enabled = true;
     }
 
     private void Update()
@@ -25,34 +25,43 @@ public class GameManager : MonoBehaviour
         if (isPlayerTurn && Input.GetKeyDown(KeyCode.E))
         {
             NumberedCard drawnCard = (NumberedCard)deck.DrawCard()[0];
-            playerHand.Add(drawnCard);
+            player.AddCardToHand(drawnCard);
             
             playerChoseToStay = false;
             
             EndPlayerTurn();
-            StartAITurn();
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
             playerChoseToStay = true;
             
             EndPlayerTurn();
-            StartAITurn();
         }
     }
     
     private void EndRound()
     {
-        int playerScore = CalculateHandValue(playerHand);
-        int aiScore = CalculateHandValue(aiHand);
+        int playerScore = CalculateHandValue(player.hand);
+        int aiScore = CalculateHandValue(ai.hand);
 
         if (playerScore > 21 || (aiScore <= 21 && aiScore > playerScore))
         {
             Debug.Log("You've Lost");
+            player.TakeDamage(ai.damageModifier);
         }
         else
         {
             Debug.Log("You Win");
+            ai.TakeDamage(player.damageModifier);
+        }
+        
+        if(player.health <= 0 || ai.health <= 0)
+        {
+            GameOver();
+        }
+        else
+        {
+            ResetGame();
         }
     }
     
@@ -68,6 +77,7 @@ public class GameManager : MonoBehaviour
 
     public void StartPlayerTurn()
     {
+        Debug.Log("LOOOOOOOOOOOOOKKKKKKKKK MAAAAAANNNNNNNN: " + playerChoseToStay +" "+ aiChoseToStay);
         isPlayerTurn = true;
         drawCanvas.enabled = true;
         
@@ -85,18 +95,39 @@ public class GameManager : MonoBehaviour
     {
         isPlayerTurn = false;
         drawCanvas.enabled = false;
-        Debug.Log("Their Turn");
+        
+        if (playerChoseToStay && aiChoseToStay)
+        {
+            EndRound();
+        }
+        else
+        {
+            Debug.Log("Their Turn");
+            StartAITurn();
+        }
     }
     
     private void StartAITurn()
     {
-        int aiScore = CalculateHandValue(aiHand);
+        int aiScore = CalculateHandValue(ai.hand);
     
         if (aiScore < 17)
         {
-            NumberedCard drawnCard = (NumberedCard)deck.DrawCard()[0];
-            aiHand.Add(drawnCard);
+            List<MonoBehaviour> drawnCards = deck.DrawCard();
             
+            foreach(var card in drawnCards)
+            {
+                if(card is NumberedCard)
+                {
+                    ai.AddCardToHand(card as NumberedCard);
+                }
+                else if(card is TrumpCard)
+                {
+                    
+                }
+            }
+            
+            drawnCards.Clear();
             aiChoseToStay = false;
         }
         else
@@ -105,11 +136,54 @@ public class GameManager : MonoBehaviour
         }
 
         EndAITurn();
-        StartPlayerTurn();
     }
     
     private void EndAITurn()
     {
-        isPlayerTurn = false;
+        if (playerChoseToStay && aiChoseToStay)
+        {
+            EndRound();
+        }
+        else
+        {
+            StartPlayerTurn();
+        }
+    }
+    
+    private void GameOver()
+    {
+        if(player.health <= 0)
+        {
+            Debug.Log("Game Over! You Lost.");
+        }
+        else
+        {
+            Debug.Log("Game Over! You Won!");
+        }
+    }
+    
+    private void ResetGame()
+    {
+        foreach(var card in player.hand)
+        {
+            Destroy(card.gameObject);
+        }
+        player.hand.Clear();
+
+        foreach(var card in ai.hand)
+        {
+            Destroy(card.gameObject);
+        }
+        ai.hand.Clear();
+        
+        StartNewRound();
+    }
+    
+    private void StartNewRound()
+    {
+        deck.ResetDeck();
+        playerChoseToStay = false;
+        aiChoseToStay = false;
+        StartPlayerTurn();
     }
 }

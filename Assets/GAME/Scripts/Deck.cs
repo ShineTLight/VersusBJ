@@ -75,4 +75,38 @@ public class Deck : MonoBehaviour
         newCard.Initialize(drawnDescription);
         return newCard;
     }
+    
+    public void ReturnCardToDeck(NumberedCard card)
+    {
+        numberedCardValues.Add(card.Value);
+        ShuffleDeck();
+    }
+    
+    private void ShuffleDeck()
+    {
+        int count = numberedCardValues.Count;
+        
+        for (int i = 0; i < count - 1; i++)
+        {
+            int r = Random.Range(i, count);
+            int temp = numberedCardValues[i];
+            numberedCardValues[i] = numberedCardValues[r];
+            numberedCardValues[r] = temp;
+        }
+    }
+    
+    public void ResetDeck()
+    {
+        numberedCardValues.Clear();
+        for (int i = 1; i <= 11; i++)
+        {
+            numberedCardValues.Add(i);
+        }
+        
+        trumpCardDescriptions.Clear();
+        trumpCardDescriptions.Add("Effect 1");
+        trumpCardDescriptions.Add("Effect 2");
+        
+        trumpCardDrawChance = 0.05f;
+    }
 }
