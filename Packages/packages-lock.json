@@ -16,6 +16,17 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.dt.app-ui": {
+      "version": "0.5.1",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.androidjni": "1.0.0",
+        "com.unity.modules.uielements": "1.0.0",
+        "com.unity.modules.physics": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
@@ -55,6 +66,39 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.muse.common": {
+      "version": "0.3.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.dt.app-ui": "0.5.1",
+        "com.unity.burst": "1.8.7",
+        "com.unity.settings-manager": "2.0.1",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.unitywebrequesttexture": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.muse.sprite": {
+      "version": "0.3.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0",
+        "com.unity.muse.common": "0.3.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.muse.texture": {
+      "version": "0.3.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.muse.common": "0.3.0",
+        "com.unity.shadergraph": "14.0.8"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.render-pipelines.core": {
       "version": "14.0.8",
       "depth": 1,
@@ -79,6 +123,13 @@
     },
     "com.unity.searcher": {
       "version": "4.9.2",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.settings-manager": {
+      "version": "2.0.1",
       "depth": 2,
       "source": "registry",
       "dependencies": {},

@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 53
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07c9b2c97f84356bb2bfac29363e611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StyleTrainerData:
+    rid: 7464011931535540224
+  m_DefaultStyleData:
+    rid: 7464011931535540225
+  m_DefaultStyleVersion: 2023090802
+  m_DefaultStyles:
+  - rid: 7464011931535540575
+  - rid: 7464011931535540576
+  - rid: 7464011931535540577
+  m_AssetPath: 
+  m_PreviousProjectIDs: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7464011931535540224
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: e76df4e0-3dfa-4096-ab28-4cca93baf745
+        m_State: 3
+        m_Styles: []
+        m_Version: 202230001
+    - rid: 7464011931535540225
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 11000000-0000-0000-0000-000000000011
+        m_State: 1
+        m_Styles:
+        - rid: 7464011931535540920
+        - rid: 7464011931535540921
+        - rid: 7464011931535540922
+        m_Version: 202230001
+    - rid: 7464011931535540575
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: c4a37424-aff2-4190-89ab-6b8f307bdaf4
+        m_State: 1
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 0
+        selectedCheckPointGUID: ab0d69da-7f0e-41b9-ab4f-0dbe2bf9614a
+        m_FavoriteCheckPointGUID: ab0d69da-7f0e-41b9-ab4f-0dbe2bf9614a
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: de075932-fbb5-499c-b129-ba06b1c7b0df
+        m_CheckPoints:
+        - m_Guid: ab0d69da-7f0e-41b9-ab4f-0dbe2bf9614a
+          m_State: 1
+          m_ProjectID: de075932-fbb5-499c-b129-ba06b1c7b0df
+          name: Default Style (Animals)
+          description: Style specialized on generating animals based on Happy Harvest
+            style.
+          parent_id: 00000000-0000-0000-0000-000000000000
+          dropDownLabelName: Default Style (Animals)
+          trainingSetData:
+            m_Guid: 
+            m_State: 0
+            m_TrainingSet: []
+            m_ProjectID: 
+          validationImagesData: []
+          m_TrainingSteps: 0
+    - rid: 7464011931535540576
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: cb1bb903-4e91-4682-bff2-4671555e8f5d
+        m_State: 1
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 0
+        selectedCheckPointGUID: 9070f7e6-5f75-4809-b11e-6b27c0aa1139
+        m_FavoriteCheckPointGUID: 9070f7e6-5f75-4809-b11e-6b27c0aa1139
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: de075932-fbb5-499c-b129-ba06b1c7b0df
+        m_CheckPoints:
+        - m_Guid: 9070f7e6-5f75-4809-b11e-6b27c0aa1139
+          m_State: 1
+          m_ProjectID: de075932-fbb5-499c-b129-ba06b1c7b0df
+          name: Default Style (Vegetation)
+          description: Style specialized on generating vegetation based on Happy
+            Harvest style.
+          parent_id: 00000000-0000-0000-0000-000000000000
+          dropDownLabelName: Default Style (Vegetation)
+          trainingSetData:
+            m_Guid: 
+            m_State: 0
+            m_TrainingSet: []
+            m_ProjectID: 
+          validationImagesData: []
+          m_TrainingSteps: 0
+    - rid: 7464011931535540577
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: b2ff9ced-9904-443a-9826-0e12146f16e2
+        m_State: 1
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 0
+        selectedCheckPointGUID: da6e2c60-1038-450f-b56f-c105032fce12
+        m_FavoriteCheckPointGUID: da6e2c60-1038-450f-b56f-c105032fce12
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: de075932-fbb5-499c-b129-ba06b1c7b0df
+        m_CheckPoints:
+        - m_Guid: da6e2c60-1038-450f-b56f-c105032fce12
+          m_State: 1
+          m_ProjectID: de075932-fbb5-499c-b129-ba06b1c7b0df
+          name: Default Style (Buildings)
+          description: Style specialized on generating buildings based on Happy Harvest
+            style.
+          parent_id: 00000000-0000-0000-0000-000000000000
+          dropDownLabelName: Default Style (Buildings)
+          trainingSetData:
+            m_Guid: 
+            m_State: 0
+            m_TrainingSet: []
+            m_ProjectID: 
+          validationImagesData: []
+          m_TrainingSteps: 0
+    - rid: 7464011931535540920
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 440dded3-6603-4b61-baa9-3b0a11d7cdec
+        m_State: 1
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 1
+        selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        m_FavoriteCheckPointGUID: active
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 11000000-0000-0000-0000-000000000011
+        m_CheckPoints:
+        - m_Guid: 3692ac2a-348d-4809-9805-b21a6eada304
+          m_State: 1
+          m_ProjectID: 11000000-0000-0000-0000-000000000011
+          name: Animals
+          description: Animals (Blackbox 500)
+          parent_id: 00000000-0000-0000-0000-000000000000
+          dropDownLabelName: Version 1
+          trainingSetData:
+            m_Guid: 9f1f10de-9c44-44d6-b60d-bc91da5dcb4f
+            m_State: 5
+            m_TrainingSet: []
+            m_ProjectID: 11000000-0000-0000-0000-000000000011
+          validationImagesData:
+          - m_Guid: 0073d05b-4e3f-47d1-a651-a50d54f3b388
+            m_State: 5
+            m_ImageArtifact:
+              m_Guid: 0073d05b-4e3f-47d1-a651-a50d54f3b388
+              m_State: 5
+            m_Prompt: horse
+          - m_Guid: ebbb2734-a576-4a63-a876-f63d3e492716
+            m_State: 5
+            m_ImageArtifact:
+              m_Guid: ebbb2734-a576-4a63-a876-f63d3e492716
+              m_State: 5
+            m_Prompt: chicken
+          - m_Guid: 215ed507-b7d6-41d1-b428-98f2ae10c7ac
+            m_State: 5
+            m_ImageArtifact:
+              m_Guid: 215ed507-b7d6-41d1-b428-98f2ae10c7ac
+              m_State: 5
+            m_Prompt: cow
+          m_TrainingSteps: 100
+    - rid: 7464011931535540921
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 8c845506-846c-4573-926c-3845a7c68275
+        m_State: 1
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 1
+        selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        m_FavoriteCheckPointGUID: active
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 11000000-0000-0000-0000-000000000011
+        m_CheckPoints:
+        - m_Guid: b1cf774e-39e8-4273-9b39-749067b9c222
+          m_State: 1
+          m_ProjectID: 11000000-0000-0000-0000-000000000011
+          name: Vegetation
+          description: Vegetation (Blackbox 500)
+          parent_id: 00000000-0000-0000-0000-000000000000
+          dropDownLabelName: Version 1
+          trainingSetData:
+            m_Guid: 7c72d8b9-badb-4e78-8aed-8b568f5911a4
+            m_State: 5
+            m_TrainingSet: []
+            m_ProjectID: 11000000-0000-0000-0000-000000000011
+          validationImagesData:
+          - m_Guid: 818ef2e4-817f-402a-9a7d-4196b616c7a4
+            m_State: 5
+            m_ImageArtifact:
+              m_Guid: 818ef2e4-817f-402a-9a7d-4196b616c7a4
+              m_State: 5
+            m_Prompt: wheat
+          - m_Guid: 643f4841-5ab5-4d07-9db3-63306db74d3b
+            m_State: 5
+            m_ImageArtifact:
+              m_Guid: 643f4841-5ab5-4d07-9db3-63306db74d3b
+              m_State: 5
+            m_Prompt: tomato
+          - m_Guid: b4932fa0-1de3-4129-b273-99432dd5c981
+            m_State: 5
+            m_ImageArtifact:
+              m_Guid: b4932fa0-1de3-4129-b273-99432dd5c981
+              m_State: 5
+            m_Prompt: carrot
+          m_TrainingSteps: 100
+    - rid: 7464011931535540922
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 06c229b5-24d4-41bc-9e38-71ae734b2904
+        m_State: 1
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 1
+        selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        m_FavoriteCheckPointGUID: active
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 11000000-0000-0000-0000-000000000011
+        m_CheckPoints:
+        - m_Guid: bab113a4-5ebc-4c50-97f1-4a0738162a3f
+          m_State: 1
+          m_ProjectID: 11000000-0000-0000-0000-000000000011
+          name: Buildings
+          description: Buildings (Blackbox 500)
+          parent_id: 00000000-0000-0000-0000-000000000000
+          dropDownLabelName: Version 1
+          trainingSetData:
+            m_Guid: 7739a4a5-a277-4e7f-90b0-681dd0c5121f
+            m_State: 5
+            m_TrainingSet: []
+            m_ProjectID: 11000000-0000-0000-0000-000000000011
+          validationImagesData:
+          - m_Guid: 9222a3e4-3e12-4f09-a9d0-95cd82ffec74
+            m_State: 5
+            m_ImageArtifact:
+              m_Guid: 9222a3e4-3e12-4f09-a9d0-95cd82ffec74
+              m_State: 5
+            m_Prompt: barn
+          - m_Guid: 93ae12a2-c462-4737-86cd-70e75d457a3c
+            m_State: 5
+            m_ImageArtifact:
+              m_Guid: 93ae12a2-c462-4737-86cd-70e75d457a3c
+              m_State: 5
+            m_Prompt: windmill
+          - m_Guid: 1b2a3915-6fa9-40bc-a46e-49bb30c1dedf
+            m_State: 5
+            m_ImageArtifact:
+              m_Guid: 1b2a3915-6fa9-40bc-a46e-49bb30c1dedf
+              m_State: 5
+            m_Prompt: house
+          m_TrainingSteps: 100
