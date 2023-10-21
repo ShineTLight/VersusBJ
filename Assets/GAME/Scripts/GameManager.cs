@@ -6,16 +6,14 @@ public class GameManager : MonoBehaviour
 {
     public Deck deck;
     public Canvas drawCanvas;
-    
     public GameObject trumpCardInventoryUI;
-
-    private bool isPlayerTurn = true;
     
     public Player player;
     public Player ai;
     
     private bool playerChoseToStay = false;
     private bool aiChoseToStay = false;
+    private bool isPlayerTurn = true;
 
     private void Start()
     {
@@ -39,11 +37,6 @@ public class GameManager : MonoBehaviour
             
             EndPlayerTurn();
         }
-        
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            trumpCardInventoryUI.SetActive(!trumpCardInventoryUI.activeSelf);
-        }   
     }
     
     private void EndRound()

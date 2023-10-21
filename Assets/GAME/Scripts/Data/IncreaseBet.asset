@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec3df5c16966fe4cb1fa69425519d15, type: 3}
+  m_Name: IncreaseBet
+  m_EditorClassIdentifier: 
+  cardName: IncreaseBet
+  description: This card increases the damage by +2 that your opponent will take
+    at the end of the round. If you win the round of course
+  cardArt: {fileID: 0}
+  effect: 0

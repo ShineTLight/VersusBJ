@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Deck : MonoBehaviour
 {
     public NumberedCard numberedCardPrefab;
     public TrumpCard trumpCardPrefab;
 
-    private List<int> numberedCardValues = new List<int>();
-    private List<string> trumpCardDescriptions = new List<string>();
+    private List<int> numberedCardValues;
+    public List<TrumpCardData> trumpCardDatas;
 
     private float trumpCardDrawChance = 0.05f;
 
@@ -18,9 +19,6 @@ public class Deck : MonoBehaviour
         {
             numberedCardValues.Add(i);
         }
-        
-        trumpCardDescriptions.Add("Effect 1");
-        trumpCardDescriptions.Add("Effect 2");
     }
 
     public List<MonoBehaviour> DrawCard()
@@ -65,14 +63,13 @@ public class Deck : MonoBehaviour
 
     private TrumpCard DrawRandomTrumpCard()
     {
-        if (trumpCardDescriptions.Count == 0) return null;
+        if (trumpCardDatas.Count == 0) return null;
 
-        int randomIndex = Random.Range(0, trumpCardDescriptions.Count);
-        string drawnDescription = trumpCardDescriptions[randomIndex];
-        trumpCardDescriptions.RemoveAt(randomIndex);
+        int randomIndex = Random.Range(0, trumpCardDatas.Count);
+        TrumpCardData drawnTrumpCard = trumpCardDatas[randomIndex];
 
         TrumpCard newCard = Instantiate(trumpCardPrefab);
-        newCard.Initialize(drawnDescription);
+        newCard.Initialize(drawnTrumpCard);
         return newCard;
     }
     
@@ -102,10 +99,6 @@ public class Deck : MonoBehaviour
         {
             numberedCardValues.Add(i);
         }
-        
-        trumpCardDescriptions.Clear();
-        trumpCardDescriptions.Add("Effect 1");
-        trumpCardDescriptions.Add("Effect 2");
         
         trumpCardDrawChance = 0.05f;
     }

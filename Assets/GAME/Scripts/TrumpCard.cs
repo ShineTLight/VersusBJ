@@ -2,32 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Image = UnityEngine.UI.Image;
 
 public class TrumpCard : MonoBehaviour
 {
-    public TrumpEffect effect;
+    public TrumpCardData cardData;
+
+    public string description;
+    public Image displayImage;
     
-    public string Description { get; private set; }
 
-    [SerializeField] private TMP_Text effectText;
-    [SerializeField] private GameObject uniqueVisual;
-
-    public void Initialize(string description)
+    public void Initialize(TrumpCardData data)
     {
-        Description = description;
-        uniqueVisual.SetActive(false);
-        effectText.text = Description;
+        cardData = data;
+        
+        description = data.description;
+        displayImage.sprite = data.cardArt;
     }
 
     public void RevealEffect()
     {
-        uniqueVisual.SetActive(true);
-        effectText.gameObject.SetActive(true);
+        
     }
     
     public void ApplyEffect(Player player, Player opponent, Deck deck)
     {
-        switch (effect)
+        switch (cardData.effect)
         {
             case TrumpEffect.IncreaseBet:
                 player.damageModifier += 2;
