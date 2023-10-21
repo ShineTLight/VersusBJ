@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public Deck deck;
     public Canvas drawCanvas;
+    
+    public GameObject trumpCardInventoryUI;
 
     private bool isPlayerTurn = true;
     
@@ -37,6 +39,11 @@ public class GameManager : MonoBehaviour
             
             EndPlayerTurn();
         }
+        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            trumpCardInventoryUI.SetActive(!trumpCardInventoryUI.activeSelf);
+        }   
     }
     
     private void EndRound()
