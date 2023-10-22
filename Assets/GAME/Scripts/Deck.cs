@@ -8,8 +8,8 @@ public class Deck : MonoBehaviour
     public NumberedCard numberedCardPrefab;
     public TrumpCard trumpCardPrefab;
 
-    private List<int> numberedCardValues;
-    public List<TrumpCardData> trumpCardDatas;
+    private List<int> numberedCardValues = new List<int>();
+    [SerializeField] private List<TrumpCardData> trumpCardDatas;
 
     private float trumpCardDrawChance = 0.05f;
 
@@ -70,6 +70,9 @@ public class Deck : MonoBehaviour
 
         TrumpCard newCard = Instantiate(trumpCardPrefab);
         newCard.Initialize(drawnTrumpCard);
+        
+        PopUpManager.Instance.ShowTrumpCardPopup(drawnTrumpCard);
+        
         return newCard;
     }
     
@@ -86,9 +89,7 @@ public class Deck : MonoBehaviour
         for (int i = 0; i < count - 1; i++)
         {
             int r = Random.Range(i, count);
-            int temp = numberedCardValues[i];
-            numberedCardValues[i] = numberedCardValues[r];
-            numberedCardValues[r] = temp;
+            (numberedCardValues[i], numberedCardValues[r]) = (numberedCardValues[r], numberedCardValues[i]);
         }
     }
     

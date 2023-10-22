@@ -340,8 +340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardData: {fileID: 0}
-  effectText: {fileID: 0}
-  uniqueVisual: {fileID: 8396802174804558161}
+  description: 
+  displayImage: {fileID: 5814810169287331549}
 --- !u!1 &8396802174804558161
 GameObject:
   m_ObjectHideFlags: 0

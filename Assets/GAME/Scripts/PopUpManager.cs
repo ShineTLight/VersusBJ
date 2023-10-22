@@ -1,23 +1,48 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PopUpManager : MonoBehaviour
 {
-    public GameObject popUpCanvas;
-    public TextMeshPro cardNameText;
-    public TextMeshPro cardDescriptionText;
+    public static PopUpManager Instance { get; private set; }
+    
+    public GameObject trumpCardPopup;
+    public TMP_Text cardNameText;
+    public TMP_Text cardDescriptionText;
+    public Image cardArtImage;
 
-    public void ShowPopUp(TrumpCardData cardData)
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        trumpCardPopup.SetActive(false);
+    }
+
+    public void ShowTrumpCardPopup(TrumpCardData cardData)
     {
         cardNameText.text = cardData.cardName;
         cardDescriptionText.text = cardData.description;
-        popUpCanvas.SetActive(true);
+        cardArtImage.sprite = cardData.cardArt;
+
+        trumpCardPopup.SetActive(true);
     }
 
-    public void ClosePopUp()
+    public void HideTrumpCardPopup()
     {
-        popUpCanvas.SetActive(false);
+        trumpCardPopup.SetActive(false);
     }
 }

@@ -41,9 +41,9 @@ MonoBehaviour:
         m_Guid: 11000000-0000-0000-0000-000000000011
         m_State: 1
         m_Styles:
-        - rid: 7464012042499261421
-        - rid: 7464012042499261422
-        - rid: 7464012042499261423
+        - rid: 7464012103957086208
+        - rid: 7464012103957086209
+        - rid: 7464012103957086210
         m_Version: 202230001
     - rid: 7464011931535540575
       type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
@@ -129,7 +129,7 @@ MonoBehaviour:
             m_ProjectID: 
           validationImagesData: []
           m_TrainingSteps: 0
-    - rid: 7464012042499261421
+    - rid: 7464012103957086208
       type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
       data:
         m_Guid: 440dded3-6603-4b61-baa9-3b0a11d7cdec
@@ -174,7 +174,7 @@ MonoBehaviour:
               m_State: 5
             m_Prompt: cow
           m_TrainingSteps: 100
-    - rid: 7464012042499261422
+    - rid: 7464012103957086209
       type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
       data:
         m_Guid: 8c845506-846c-4573-926c-3845a7c68275
@@ -219,7 +219,7 @@ MonoBehaviour:
               m_State: 5
             m_Prompt: carrot
           m_TrainingSteps: 100
-    - rid: 7464012042499261423
+    - rid: 7464012103957086210
       type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
       data:
         m_Guid: 06c229b5-24d4-41bc-9e38-71ae734b2904

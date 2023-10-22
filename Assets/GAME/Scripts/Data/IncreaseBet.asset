@@ -15,5 +15,5 @@ MonoBehaviour:
   cardName: IncreaseBet
   description: This card increases the damage by +2 that your opponent will take
     at the end of the round. If you win the round of course
-  cardArt: {fileID: 0}
+  cardArt: {fileID: 21300000, guid: e754845ca7f359443aa66a76022a2b24, type: 3}
   effect: 0
