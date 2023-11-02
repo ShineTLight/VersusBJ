@@ -8,6 +8,8 @@ public class InventoryUI : MonoBehaviour
     public GameObject trumpCardInventoryUI;
     public RectTransform frame;
     public List<InventorySlot> inventorySlots;
+    
+    public InventorySlot selectedSlot;
 
     private int currentIndex = 0;
 
@@ -30,6 +32,17 @@ public class InventoryUI : MonoBehaviour
         if (trumpCardInventoryUI.activeSelf)
         {
             HandleNavigation();
+        }
+    }
+    
+    public void UpdateInventoryDisplay(List<TrumpCardData> trumpCards)
+    {
+        for (int i = 0; i < trumpCards.Count; i++)
+        {
+            if (i < inventorySlots.Count)
+            {
+                inventorySlots[i].AddCard(trumpCards[i]);
+            }
         }
     }
     
@@ -67,5 +80,6 @@ public class InventoryUI : MonoBehaviour
         }
         
         frame.DOMove(inventorySlots[currentIndex].transform.position, 0.15f);
+        selectedSlot = inventorySlots[currentIndex];
     }
 }

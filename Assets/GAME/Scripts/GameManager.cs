@@ -24,8 +24,21 @@ public class GameManager : MonoBehaviour
     {
         if (isPlayerTurn && Input.GetKeyDown(KeyCode.E))
         {
-            NumberedCard drawnCard = (NumberedCard)deck.DrawCard()[0];
-            player.AddCardToHand(drawnCard);
+            var drawnCard = deck.DrawCard();
+
+            foreach (var VARIABLE in drawnCard)
+            {
+                if (VARIABLE is NumberedCard)
+                {
+                    player.AddCardToHand((NumberedCard)VARIABLE);
+                }
+                else if (VARIABLE is TrumpCard)
+                {
+                    
+                }
+            }
+            
+            
             
             playerChoseToStay = false;
             

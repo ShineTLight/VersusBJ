@@ -390,6 +390,7 @@ MonoBehaviour:
   - {fileID: 1889855097}
   - {fileID: 1845537129}
   - {fileID: 1623273455}
+  trumpCardSlotPrefab: {fileID: 0}
 --- !u!1001 &139020945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3458,6 +3459,7 @@ MonoBehaviour:
   damageModifier: 1
   damageProtection: 0
   hand: []
+  trumpCardInventory: []
 --- !u!4 &1342458798
 Transform:
   m_ObjectHideFlags: 0
@@ -4669,6 +4671,7 @@ MonoBehaviour:
   damageModifier: 1
   damageProtection: 0
   hand: []
+  trumpCardInventory: []
 --- !u!4 &2129384297
 Transform:
   m_ObjectHideFlags: 0

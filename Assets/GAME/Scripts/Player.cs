@@ -1,14 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public bool isAI = false;
+    
     public int health = 5;
     public int damageModifier = 1;
     public int damageProtection = 0;
 
     public List<NumberedCard> hand = new List<NumberedCard>();
+    public List<TrumpCardData> trumpCardInventory = new List<TrumpCardData>();
+    
+    //public Action<List<TrumpCardData>> OnInventoryChanged;
+    
+    public void AddCardToInventory(TrumpCardData card)
+    {
+        trumpCardInventory.Add(card);
+        //OnInventoryChanged?.Invoke(trumpCardInventory);
+    }
     
     public void TakeDamage(int amount)
     {
