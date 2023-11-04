@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour
 {
     public Image icon;
-    private TrumpCardData cardData;
+    public TrumpCardData cardData;
 
     public void AddCard(TrumpCardData newCard)
     {

@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public Deck deck;
     public Canvas drawCanvas;
-    public GameObject trumpCardInventoryUI;
     
     public Player player;
     public Player ai;
@@ -26,19 +25,17 @@ public class GameManager : MonoBehaviour
         {
             var drawnCard = deck.DrawCard();
 
-            foreach (var VARIABLE in drawnCard)
+            foreach (var card in drawnCard)
             {
-                if (VARIABLE is NumberedCard)
+                if (card is NumberedCard)
                 {
-                    player.AddCardToHand((NumberedCard)VARIABLE);
+                    player.AddCardToHand(card as NumberedCard);
                 }
-                else if (VARIABLE is TrumpCard)
+                else if (card is TrumpCard)
                 {
-                    
+                    player.AddCardToInventory(card as TrumpCard);
                 }
             }
-            
-            
             
             playerChoseToStay = false;
             
@@ -135,7 +132,7 @@ public class GameManager : MonoBehaviour
                 }
                 else if(card is TrumpCard)
                 {
-                    
+                    ai.AddCardToInventory(card as TrumpCard);
                 }
             }
             

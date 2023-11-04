@@ -13,13 +13,17 @@ public class Player : MonoBehaviour
 
     public List<NumberedCard> hand = new List<NumberedCard>();
     public List<TrumpCardData> trumpCardInventory = new List<TrumpCardData>();
+
+    public InventoryUI InventoryUI;
     
-    //public Action<List<TrumpCardData>> OnInventoryChanged;
-    
-    public void AddCardToInventory(TrumpCardData card)
+    public void AddCardToInventory(TrumpCard card)
     {
-        trumpCardInventory.Add(card);
-        //OnInventoryChanged?.Invoke(trumpCardInventory);
+        trumpCardInventory.Add(card.cardData);
+
+        if (!isAI)
+        {
+            InventoryUI.UpdateInventoryDisplay(trumpCardInventory);
+        }
     }
     
     public void TakeDamage(int amount)
