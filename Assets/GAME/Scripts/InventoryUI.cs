@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class InventoryUI : MonoBehaviour
 {
-    public GameObject trumpCardInventoryUI;
-    public RectTransform frame;
+    //Connections
+    [SerializeField] private GameObject descriptionPanel;
+    [SerializeField] private TextMeshProUGUI cardNameText;
+    [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private GameObject trumpCardInventoryUI;
+    [SerializeField] private RectTransform frame;
+    
+    
     public List<InventorySlot> inventorySlots;
     
     public InventorySlot selectedSlot;
@@ -81,5 +89,21 @@ public class InventoryUI : MonoBehaviour
         
         frame.DOMove(inventorySlots[currentIndex].transform.position, 0.15f);
         selectedSlot = inventorySlots[currentIndex];
+
+        if (selectedSlot.cardData != null)
+        {
+            descriptionPanel.SetActive(true);
+            ShowDescription();
+        }
+        else
+        {
+            descriptionPanel.SetActive(false);
+        }
+    }
+
+    private void ShowDescription()
+    {
+        cardNameText.text = selectedSlot.cardData.cardName;
+        descriptionText.text = selectedSlot.cardData.description;
     }
 }

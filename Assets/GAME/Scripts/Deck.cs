@@ -71,8 +71,6 @@ public class Deck : MonoBehaviour
         TrumpCard newCard = Instantiate(trumpCardPrefab);
         newCard.Initialize(drawnTrumpCard);
         
-        PopUpManager.Instance.ShowTrumpCardPopup(drawnTrumpCard);
-        
         return newCard;
     }
     

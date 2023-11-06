@@ -32,8 +32,10 @@ public class PopUpManager : MonoBehaviour
         trumpCardPopup.SetActive(false);
     }
 
-    public void ShowTrumpCardPopup(TrumpCardData cardData)
+    public void ShowTrumpCardPopup(TrumpCard card)
     {
+        var cardData = card.cardData;
+        
         cardNameText.text = cardData.cardName;
         cardDescriptionText.text = cardData.description;
         cardArtImage.sprite = cardData.cardArt;

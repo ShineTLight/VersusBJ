@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
                 else if (card is TrumpCard)
                 {
                     player.AddCardToInventory(card as TrumpCard);
+                    PopUpManager.Instance.ShowTrumpCardPopup(card as TrumpCard);
                 }
             }
             
