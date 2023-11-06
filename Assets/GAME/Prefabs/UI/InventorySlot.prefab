@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 5757694684148870539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2475, y: 1.2475, z: 1.2475}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2432086748096946859}
@@ -67,8 +67,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e91ebdbd3f37e94fbc011b827f6d84e, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 107a3b99d9e7aee488e658ffc76cbcb4, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 8137651044613578638}
+  cardData: {fileID: 0}
 --- !u!1 &7701702325789703203
 GameObject:
   m_ObjectHideFlags: 0
