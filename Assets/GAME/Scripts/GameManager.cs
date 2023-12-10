@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     private bool aiChoseToStay = false;
     private bool isPlayerTurn = true;
 
+    [SerializeField] private InventoryUI InventoryUI;
+
     private void Start()
     {
         drawCanvas.enabled = true;
@@ -21,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerTurn && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerTurn && Input.GetKeyDown(KeyCode.E) && !InventoryUI.isOpen)
         {
             var drawnCard = deck.DrawCard();
 
@@ -42,7 +44,7 @@ public class GameManager : MonoBehaviour
             
             EndPlayerTurn();
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if (Input.GetKeyDown(KeyCode.Q) && !InventoryUI.isOpen)
         {
             playerChoseToStay = true;
             

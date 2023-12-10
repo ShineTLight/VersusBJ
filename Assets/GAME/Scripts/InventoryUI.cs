@@ -13,16 +13,23 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private GameObject trumpCardInventoryUI;
     [SerializeField] private RectTransform frame;
-    
-    
-    public List<InventorySlot> inventorySlots;
-    
-    public InventorySlot selectedSlot;
 
+    [SerializeField] private GameObject gameControlUI;
+    [SerializeField] private GameObject inventoryControlUI;
+    
+    //Slots
+    public List<InventorySlot> inventorySlots;
+    public InventorySlot selectedSlot;
+    
+    //Settings
+    public bool isOpen = false;
     private int currentIndex = 0;
 
     private void Start()
     {
+        gameControlUI.SetActive(true);
+        inventoryControlUI.SetActive(false);
+        
         currentIndex = 0;
         MoveFrame(0);
         trumpCardInventoryUI.SetActive(false);
@@ -32,7 +39,10 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
+            isOpen = !isOpen;
             trumpCardInventoryUI.SetActive(!trumpCardInventoryUI.activeSelf);
+            inventoryControlUI.SetActive(!inventoryControlUI.activeSelf);
+            gameControlUI.SetActive(!gameControlUI.activeSelf);
             currentIndex = 0;
             MoveFrame(0);
         }
